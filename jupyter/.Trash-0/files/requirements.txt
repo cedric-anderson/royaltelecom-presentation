@@ -1,0 +1,7 @@
+# Installation bibliotheque
+pandas
+numpy
+matplotlib
+seaborn
+ipywidgets
+joblib

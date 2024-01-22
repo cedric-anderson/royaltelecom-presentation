@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  streamlit-app:
+    container_name: streamlit_app
+    build:
+      context: /home/ced/telecom_customer_churn/service  # Chemin vers le répertoire de votre application Streamlit
+      dockerfile: Dockerfile  # Nom du Dockerfile pour l'application Streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      - /home/ced/telecom_customer_churn/service:/app  # Montez le répertoire de votre application Streamlit dans le conteneur
+
+  ml-jupyter:
+    container_name: custom_churn
+    build:
+      context: /home/ced/telecom_customer_churn/jupyter  # Chemin vers le répertoire de votre application ML
+      dockerfile: Dockerfile  # Nom du Dockerfile pour l'application ML
+    ports:
+      - "8888:8888"
+    volumes:
+      - /home/ced/telecom_customer_churn/jupyter:/src  # Montez le répertoire de votre application ML dans le conteneur
+    environment:
+      - JUPYTER_TOKEN=0e65bf27ce9f578a86892d95b451829326a56e7b38a297c8  # Remplacez "your_token" par le jeton de votre choix pour accéder à Jupyter
+

@@ -1,0 +1,11 @@
+# Installation bibliotheque
+pandas
+numpy
+matplotlib
+seaborn
+ipywidgets
+
+# ML bibliotheque
+xgboost
+scikit-learn
+joblib
