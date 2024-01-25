@@ -1,9 +1,9 @@
 {
   "build": {
     "builder": "docker",
-    "tag": "ced0311/dockerhub-ced0311/streamlit_app"
+    "tag": "ced0311/dockerhub-ced0311/streamlit_app:latest"
   },
   "run": {
-    "image": "ced0311/dockerhub-ced0311/streamlit_app"
+    "image": "ced0311/dockerhub-ced0311/streamlit_app:latest"
   }
 }
