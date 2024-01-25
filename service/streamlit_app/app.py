@@ -14,7 +14,7 @@ try:
 except Exception as e:
     print(f"Erreur lors de la lecture du fichier : {e}")
 
-st.sidebar.title("Sommaire")
+st.sidebar.title("Sommaire:")
 
 pages = ["Contexte du projet", "Exploration des données", "Data visualisation", "Modele performance"]
 
