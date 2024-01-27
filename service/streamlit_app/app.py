@@ -10,7 +10,7 @@ import joblib
 
 
 try:
-    df = pd.read_csv("/app/streamlit_app/data/telecom_custumerDB.csv", encoding="utf-8")
+    df = pd.read_csv("/service/streamlit_app/data/telecom_custumerDB.csv", encoding="utf-8")
 except Exception as e:
     print(f"Erreur lors de la lecture du fichier : {e}")
 
@@ -373,15 +373,15 @@ elif page == pages[2]:
 elif page == pages[3]:
     st.write("### Performance modele")
 
-    train_feature_down = pd.read_csv("/app/streamlit_app/data/train_feature_down.csv")
-    train_labels_down = pd.read_csv("/app/streamlit_app/data/train_labels_down.csv")
-    val_labels = pd.read_csv("/app/streamlit_app/data/val_labels.csv")
-    val_feature = pd.read_csv("/app/streamlit_app/data/val_feature.csv")
+    train_feature_down = pd.read_csv("/service/streamlit_app/data/train_feature_down.csv")
+    train_labels_down = pd.read_csv("/service/streamlit_app/data/train_labels_down.csv")
+    val_labels = pd.read_csv("/service/streamlit_app/data/val_labels.csv")
+    val_feature = pd.read_csv("/service/streamlit_app/data/val_feature.csv")
 
     # Charger les modèles
-    logreg_model = joblib.load("/app/streamlit_app/modeles/logreg_model.joblib")
-    rf_model = joblib.load("/app/streamlit_app/modeles/rf_model.joblib")
-    xgboost_model = joblib.load("/app/streamlit_app/modeles/xgboost_model.joblib")
+    logreg_model = joblib.load("/service/streamlit_app/modeles/logreg_model.joblib")
+    rf_model = joblib.load("/service/streamlit_app/modeles/rf_model.joblib")
+    xgboost_model = joblib.load("/service/streamlit_app/modeles/xgboost_model.joblib")
 
     # Fonction pour entraîner le modèle sélectionné
     def train_model(model_choisi, y_pred_reg, y_pred_rf, y_pred_xgboost, val_labels, val_feature):
